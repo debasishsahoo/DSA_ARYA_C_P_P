@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "*.html": "django-html",
+        "**/*.html": "html",
+        "**/templates/**/*.html": "django-html",
+        "**/templates/**/*": "django-txt",
+        "**/requirements{/**,*}.{txt,in}": "pip-requirements",
+        "*.java": "java",
+        "GATE1.C": "cpp",
+        "GATE2.C": "cpp",
+        "GATE4.C": "cpp",
+        "IN-POST.C": "cpp",
+        "stack": "cpp",
+        "iostream": "cpp",
+        "ostream": "cpp"
+    }
+}
