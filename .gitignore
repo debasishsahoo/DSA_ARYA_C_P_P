@@ -1,4 +1,5 @@
-.exe
+*.exe
 /output
-.bin
-.cph
+*.bin
+/cph
+*.cph
