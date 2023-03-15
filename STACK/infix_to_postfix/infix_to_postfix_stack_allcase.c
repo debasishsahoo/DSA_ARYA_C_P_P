@@ -1,4 +1,4 @@
-// This uses struct based stack implimentation of Stack
+// This uses struct based stack implementation of Stack
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

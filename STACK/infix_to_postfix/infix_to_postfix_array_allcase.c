@@ -113,7 +113,7 @@ int covertInfixToPostfix(char *expr)
                 pop();
             }
         }
-        else // if an opertor
+        else // if an operator
         {
             while (!isEmpty() && precedence(expr[i]) <= precedence(peek()))
                 expr[++j] = pop();

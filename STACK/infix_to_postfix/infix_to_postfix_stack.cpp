@@ -37,7 +37,7 @@ string convert(string infix)
             s.push(infix[i]);
             i++;
         }
-        // if closing bracket encounted then keep popping from stack until
+        // if closing bracket encounter then keep popping from stack until
         // closing a pair opening bracket is not encountered
         else if (infix[i] == ')')
         {

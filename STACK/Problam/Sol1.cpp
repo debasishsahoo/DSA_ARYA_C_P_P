@@ -1,4 +1,6 @@
-// C++ program for the above approach
+/*
+Given a stack S, the task is to copy the content of the given stack S to another stack T maintaining the same order.
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -76,5 +78,5 @@ int main()
     return 0;
 }
 
-//Time Complexity: O(N) 
-//Auxiliary Space: O(1)
+// Time Complexity: O(N)
+// Auxiliary Space: O(1)
