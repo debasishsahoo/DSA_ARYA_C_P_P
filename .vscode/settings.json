@@ -13,6 +13,7 @@
         "stack": "cpp",
         "iostream": "cpp",
         "ostream": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "ABC.C": "cpp"
     }
 }

@@ -5,15 +5,21 @@ using namespace std;
 // function prototype for display_stack utility
 void display_stack(stack<string> st);
 
+
+
+
 int main()
 {
 
     // create a stack of strings
     stack<string> colors;
 
+
     cout << "Initial Stack: ";
     // print elements of stack
     display_stack(colors);
+
+
 
     // check if the stack is empty
     if (colors.empty())
@@ -25,10 +31,22 @@ int main()
         cout << "Stack is Not Empty" << endl;
     }
 
+
+
+
+
+
+
+
     // push elements into the stack
     colors.push("Red");
     colors.push("Orange");
     colors.push("Blue");
+
+
+
+
+
 
     if (colors.empty())
     {

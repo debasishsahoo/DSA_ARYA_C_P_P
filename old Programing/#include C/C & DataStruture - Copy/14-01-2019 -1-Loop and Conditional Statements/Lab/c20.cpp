@@ -5,6 +5,7 @@ int main()
 
     printf("Enter an integer: ");
     scanf("%d", &n);
+    //334457
 
     originalInteger = n;
 

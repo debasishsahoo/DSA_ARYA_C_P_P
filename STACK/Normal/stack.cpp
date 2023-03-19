@@ -6,9 +6,9 @@
 using namespace std;
 
 #define MAX 10
-int size = 0;
+int size = 0; 
 
-// Creating a stack
+// Creating a stack-  
 struct stack
 {
     int items[MAX];
