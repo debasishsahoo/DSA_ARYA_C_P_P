@@ -14,6 +14,7 @@ public:
     // Other methods of Test
 };
 
+
 template <>
 class Test<int>
 {
@@ -24,6 +25,7 @@ public:
         cout << "Specialized template object\n";
     }
 };
+
 
 int main()
 {

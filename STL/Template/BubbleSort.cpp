@@ -21,15 +21,15 @@ int main()
 {
 
     // int a[5] = {10, 50, 30, 40, 20};
-    // float a[5] = {10.4, 50.9, 30.4, 40.5, 20.3};
-    char a[5] = {'z', 'a', 'f', 'q', 'e'};
+    //float a[5] = {10.4, 50.9, 30.4, 40.5, 20.3};
+     char a[5] = {'z', 'a', 'f', 'q', 'e'};
 
     int n = sizeof(a) / sizeof(a[0]);
 
     // calls template function
     // bubbleSort<int>(a, n);
-    // bubbleSort<float>(a, n);
-    bubbleSort<char>(a, n);
+    //bubbleSort<float>(a, n);
+     bubbleSort<char>(a, n);
 
     cout << " Sorted array : ";
     for (int i = 0; i < n; i++)

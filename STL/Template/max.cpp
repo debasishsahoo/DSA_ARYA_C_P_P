@@ -18,6 +18,14 @@ T GetMax(T a, T b)
     return result;
 }
 
+
+
+
+
+
+
+
+
 main()
 {
     getMax(2, 5);

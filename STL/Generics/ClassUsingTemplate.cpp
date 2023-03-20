@@ -13,8 +13,7 @@ public:
     void print();
 };
 
-template <typename T>
-Array<T>::Array(T arr[], int s)
+template <typename T> Array<T>::Array(T arr[], int s)
 {
     ptr = new T[s];
     size = s;
@@ -37,3 +36,7 @@ int main()
     a.print();
     return 0;
 }
+
+
+
+//  https://github.com/debasishsahoo/DSA_ARYA_C_P_P

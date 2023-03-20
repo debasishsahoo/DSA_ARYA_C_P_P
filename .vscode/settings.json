@@ -14,6 +14,7 @@
         "iostream": "cpp",
         "ostream": "cpp",
         "xstring": "cpp",
-        "ABC.C": "cpp"
+        "ABC.C": "cpp",
+        "deque": "cpp"
     }
 }
