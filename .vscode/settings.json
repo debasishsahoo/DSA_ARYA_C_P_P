@@ -17,6 +17,7 @@
         "ABC.C": "cpp",
         "deque": "cpp",
         "list": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "queue": "cpp"
     }
 }
