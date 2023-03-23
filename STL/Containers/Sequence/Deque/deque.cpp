@@ -124,7 +124,7 @@ int main()
     deque<int>::iterator it1;
 
     it1 = nDQ1.begin();
-    nDQ.erase(it1);
+    nDQ1.erase(it1);
 
     // Printing the deque
     for (auto it1 = nDQ1.begin(); it1 != nDQ1.end(); ++it1)
@@ -194,3 +194,5 @@ int main()
 
     return 0;
 }
+
+
