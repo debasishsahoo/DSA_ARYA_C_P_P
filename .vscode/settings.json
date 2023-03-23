@@ -18,6 +18,11 @@
         "deque": "cpp",
         "list": "cpp",
         "utility": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "xtree": "cpp",
+        "xhash": "cpp",
+        "xutility": "cpp",
+        "set": "cpp",
+        "xstddef": "cpp"
     }
 }

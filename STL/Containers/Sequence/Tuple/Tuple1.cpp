@@ -33,6 +33,11 @@ int main()
     cout << "The size of tuple is : ";
     cout << tuple_size<decltype(TPL)>::value << endl;
 
+
+
+
+
+
     // Initializing 1st tuple
     tuple<int, char, float> tup1(20, 'g', 17.5);
 
