@@ -3,6 +3,10 @@
 #include <tuple> // for get()
 using namespace std;
 
+
+
+
+
 // somewhere in the program
 #define WINDOWS 1
 void console_clear_screen()
@@ -33,13 +37,13 @@ int main()
     //---------------------------------------------
 
     // Initializing the array elements
-    array<int, 6> ar = {1, 2, 3, 4, 5, 6};
+array<int, 6> ar = {1, 2, 3, 4, 5, 6};
 
-    // Printing array elements using at()
-    cout << "The array elements are (using at()) : ";
-    for (int i = 0; i < 6; i++)
-        cout << ar.at(i) << " ";
-    cout << endl;
+// Printing array elements using at()
+cout << "The array elements are (using at()) : ";
+for (int i = 0; i < 6; i++)
+    cout << ar.at(i) << " ";
+cout << endl;
 
     //-----------------------------------------------
     // Printing array elements using get()
@@ -134,3 +138,4 @@ int main()
 
     return 0;
 }
+

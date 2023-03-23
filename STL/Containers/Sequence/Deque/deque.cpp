@@ -120,28 +120,28 @@ int main()
     for (auto it = mDQ.begin(); it != mDQ.end(); ++it)
         cout << ' ' << *it;
 
-    deque<int> nDQ{1, 2, 3, 4, 5};
-    deque<int>::iterator it;
+    deque<int> nDQ1{1, 2, 3, 4, 5};
+    deque<int>::iterator it1;
 
-    it = nDQ.begin();
-    nDQ.erase(it);
-
-    // Printing the deque
-    for (auto it = nDQ.begin(); it != nDQ.end(); ++it)
-        cout << ' ' << *it;
-
-    deque<int> nDQ{1, 2, 3, 4, 5};
-    deque<int>::iterator it1, it2;
-
-    it1 = nDQ.begin();
-    it2 = nDQ.end();
-    it2--;
-    it2--;
-
-    nDQ.erase(it1, it2);
+    it1 = nDQ1.begin();
+    nDQ.erase(it1);
 
     // Printing the deque
-    for (auto it = nDQ.begin(); it != nDQ.end(); ++it)
+    for (auto it1 = nDQ1.begin(); it1 != nDQ1.end(); ++it1)
+        cout << ' ' << *it1;
+
+    deque<int> nDQ2{1, 2, 3, 4, 5};
+    deque<int>::iterator it3, it4;
+
+    it3 = nDQ2.begin();
+    it4 = nDQ2.end();
+    it4--;
+    it4--;
+
+    nDQ2.erase(it3, it4);
+
+    // Printing the deque
+    for (auto it = nDQ2.begin(); it != nDQ2.end(); ++it)
         cout << ' ' << *it;
 
     deque<int> aDQ;
