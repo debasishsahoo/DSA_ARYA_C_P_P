@@ -11,18 +11,18 @@ long int Calculation1(int n)
 
 long int Calculation2(int n)
 {
-    int sum = 0;//1ms
-
-          //1 ms      1ms     1ms
+    int sum = 0;
     for (int i = 1; i <= n; i++)
     {
-        sum = sum + i; //2ms
+        sum = sum + i; 
     }
-
-    //5ms
-
-    return sum;//1ms
+    return sum;
 }
+
+
+
+
+
 
 // O(1)+O(1OO)+O(1)
 

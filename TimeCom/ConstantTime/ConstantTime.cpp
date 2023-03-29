@@ -12,13 +12,6 @@ void demo2()
     cout << 1;
     cout << 1;
     cout << 1;
-    cout << 1;
-    cout << 1;
-    cout << 1;
-    cout << 1;
-    cout << 1;
-    cout << 1;
-    cout << 1;
 }
 
 int main()

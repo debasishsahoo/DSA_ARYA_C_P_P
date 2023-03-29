@@ -28,6 +28,13 @@ int main()
 
 /*
 O(1) + O(m) + O(n) + O(1)
+
+
+
+
+
+
+
 O(m+n)
 if m = n O(2n) -> O(n)
 */
