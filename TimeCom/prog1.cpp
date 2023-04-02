@@ -9,6 +9,13 @@ long int Calculation1(int n)
     return n * (n + 1) / 2;
 }
 
+
+
+
+
+
+
+
 long int Calculation2(int n)
 {
     int sum = 0;
@@ -18,6 +25,10 @@ long int Calculation2(int n)
     }
     return sum;
 }
+
+
+
+
 
 
 

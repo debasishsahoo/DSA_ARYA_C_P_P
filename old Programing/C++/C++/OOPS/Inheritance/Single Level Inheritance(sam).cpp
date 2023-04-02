@@ -1,30 +1,30 @@
     #include <iostream>  
     using namespace std;  
-    class A  
+    class sum 
     {  
         int a = 4;  
         int b = 5;  
         public:  
-        int mul()  
+        int add()  
         {  
             int c = a*b;  
             return c;  
         }     
     };  
       
-    class B : private A  
+    class view : private sum  
     {  
         public:  
         void display()  
         {  
-            int result = mul();  
-            std::cout <<"Multiplication of a and b is : "<<result<< std::endl;  
+            int result = add();  
+            std::cout <<"addition of a and b is : "<<result<< std::endl;  
         }  
     };  
     int main()  
     {  
-       B b;  
-       b.display();  
+       view vi;  
+       vi.display();  
       
         return 0;  
     }  

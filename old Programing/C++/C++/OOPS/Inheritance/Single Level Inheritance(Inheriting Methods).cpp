@@ -10,7 +10,7 @@
        {    
            public:  
          void bark(){  
-        cout<<"Barking...";   
+        cout<<"Barking..."<<endl;   
          }    
        };   
     int main(void) {  

@@ -1,5 +1,5 @@
     #include <iostream>  
-    using namespace std;  
+   using namespace std;  
     class Student {  
        public:  
           int id;//data member (also instance variable)      

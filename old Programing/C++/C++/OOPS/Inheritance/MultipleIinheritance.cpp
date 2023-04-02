@@ -9,12 +9,10 @@
         {  
             a = n;  
         }  
-    };  
-      
+    };      
     class B  
     {  
-        protected:  
-        int b;  
+        protected:int b;  
         public:  
         void get_b(int n)  
         {  

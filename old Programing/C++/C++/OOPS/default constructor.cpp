@@ -2,25 +2,22 @@
 // concept of Constructors 
 #include <iostream> 
 using namespace std; 
-
-class construct { 
+class abc { 
 public: 
 	int a, b; 
-
 	// Default Constructor 
-	construct() 
+	abc() 
 	{ 
 		a = 10; 
 		b = 20; 
 	} 
 }; 
-
 int main() 
 { 
 	// Default constructor called automatically 
 	// when the object is created 
-	construct c; 
-	cout << "a: " << c.a << endl << "b: " << c.b; 
+	abc c; 
+	cout << "a: " << c.a << endl << "b: " << c.b<<endl; 
 	return 1; 
 } 
-
+ 

@@ -4,24 +4,25 @@ using namespace std;
 
 void intersection(int *arr1, int *arr2, int n, int m)
 {
-    sort(arr1, arr1 + n);
-    sort(arr2, arr2 + m);
-    int i = 0, j = 0;
-    while (i < n && j < m)
+    sort(arr1, arr1 + n);....................n
+    sort(arr2, arr2 + m);....................n
+    int i = 0, j = 0;........................1
+    while (i < n && j < m)...................nm
     {
-        if (arr1[i] == arr2[j])
+        if (arr1[i] == arr2[j])..............n
         {
             cout << arr1[i] << " ";
             i++;
             j++;
         }
-        else if (arr1[i] < arr2[j])
+        else if (arr1[i] < arr2[j])..........n
         {
             i++;
         }
         else
         {
             j++;
+            exit(0)
         }
     }
 }

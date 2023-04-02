@@ -10,8 +10,7 @@
            std::cout << "Enter the value of 'a' : " << std::endl;  
            cin>>a;  
         }  
-    };  
-      
+    };      
     class B : public A   
     {  
         protected:  
