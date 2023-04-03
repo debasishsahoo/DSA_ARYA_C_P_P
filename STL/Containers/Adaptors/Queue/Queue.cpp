@@ -15,6 +15,7 @@ void ShowQ(queue<T> gq)
     }
     cout << '\n';
 }
+
 template <typename T>
 void Check_Empty(queue<T> gq)
 {
@@ -79,12 +80,13 @@ int main()
     cout << endl;
 
     queue<int> NumQ;
+    NumQ.emplace(5);
+    NumQ.emplace(6);
     NumQ.emplace(1);
     NumQ.emplace(2);
     NumQ.emplace(3);
     NumQ.emplace(4);
-    NumQ.emplace(5);
-    NumQ.emplace(6);
+
     cout << endl
          << "NumQ= ";
     ShowQ(NumQ);

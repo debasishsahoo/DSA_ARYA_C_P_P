@@ -23,6 +23,7 @@
         "xhash": "cpp",
         "xutility": "cpp",
         "set": "cpp",
-        "xstddef": "cpp"
+        "xstddef": "cpp",
+        "LINKEDHL.C": "cpp"
     }
 }

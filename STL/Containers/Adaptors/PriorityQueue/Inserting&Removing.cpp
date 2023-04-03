@@ -1,5 +1,3 @@
-// C++ Program to demonstrate various
-// method/function in Priority Queue
 #include <iostream>
 #include <queue>
 using namespace std;
