@@ -1,10 +1,8 @@
 #include <iostream>
 #include <queue>
-
 using namespace std;
 
 template <typename T>
-// Print the queue
 void ShowQ(queue<T> gq)
 {
     queue<T> g = gq;
@@ -28,6 +26,22 @@ void Check_Empty(queue<T> gq)
     {
         cout << "False";
     }
+}
+
+template <typename T>
+void Do_Swap(queue<T> Q1, queue<T> Q2)
+{
+    cout << "The Before Swap Queue1 is : " << endl;
+    ShowQ(Q1);
+    cout << "The Before Swap Queue2 is : " << endl;
+    ShowQ(Q2);
+
+    Q1.swap(Q2);
+
+    cout << "The After Swap Queue1 is : " << endl;
+    ShowQ(Q1);
+    cout << "The After Swap Queue2 is : " << endl;
+    ShowQ(Q2);
 }
 
 // Driver Code
@@ -56,28 +70,12 @@ int main()
         Queue1.push(i);
     }
 
-    cout << "The Before Swap Queue1 is : ";
-    ShowQ(Queue1);
-
-    for (int i = 5; i < 10; i++)
+    for (int i = 5; i < 9; i++)
     {
         Queue2.push(i);
     }
 
-    cout << "The Before Swap Queue2 is : ";
-    ShowQ(Queue2);
-
-    // Swap elements of queues
-    Queue1.swap(Queue2);
-
-    // Print the first queue
-    cout << "After SWAP queue1 = ";
-    ShowQ(Queue1);
-    // Print the second set
-    cout << endl
-         << "After SWAP queue2 = ";
-    ShowQ(Queue2);
-    cout << endl;
+    Do_Swap(Queue1, Queue2);
 
     queue<int> NumQ;
     NumQ.emplace(5);

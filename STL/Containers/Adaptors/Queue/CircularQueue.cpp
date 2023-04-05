@@ -48,15 +48,6 @@ public:
     int size();
 };
 
-
-
-
-
-
-
-
-
-
 // function enqueue - to add data to queue
 void CircularQueue ::enqueue(int x)
 {
@@ -82,7 +73,6 @@ void CircularQueue ::enqueue(int x)
 int CircularQueue ::dequeue()
 {
     int y;
-
     if (isEmpty())
     {
         cout << "Queue is empty" << endl;

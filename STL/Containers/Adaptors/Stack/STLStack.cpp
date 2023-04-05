@@ -59,12 +59,10 @@ int main()
 // utility function to display stack elements
 void display_stack(stack<string> st)
 {
-
     while (!st.empty())
     {
         cout << st.top() << ", ";
         st.pop();
     }
-
     cout << endl;
 }

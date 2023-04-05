@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-  int x[5] = {1, 2, 3, 4, 5};
+  int x[5] = {11, 22, 33, 44, 55};
   int* ptr;
 
   ptr = &x[2]; 
