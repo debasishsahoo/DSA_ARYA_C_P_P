@@ -2,7 +2,7 @@
 using namespace std;
 #define SIZE 10
 
-class CircularQueue
+class CircularQueue                                      
 {
     int a[SIZE];
     int rear;  // same as tail

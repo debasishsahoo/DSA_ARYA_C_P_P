@@ -120,7 +120,6 @@
         }  
       
     }  
-      
     void begin_delete()  
     {  
         struct node *ptr;   
@@ -173,8 +172,7 @@
             printf("\nnode deleted\n");  
       
         }  
-    }  
-      
+    }      
     void search()  
     {  
         struct node *ptr;  
@@ -217,8 +215,7 @@
             }  
         }     
               
-    }  
-      
+    }    
     void display()  
     {  
         struct node *ptr;  

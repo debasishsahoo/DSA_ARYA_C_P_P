@@ -60,6 +60,10 @@ int main()
 
     cout << q.dequeue() << endl; // print 1
     cout << q.dequeue() << endl; // print 2
+    cout << q.dequeue() << endl; // print 3
+    cout << q.dequeue() << endl; // print 4
+    cout << q.dequeue() << endl; // print 5
+    cout << q.dequeue() << endl; // print 6
 
     return 0;
 }

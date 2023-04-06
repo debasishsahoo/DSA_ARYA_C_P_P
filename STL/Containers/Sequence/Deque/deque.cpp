@@ -37,7 +37,7 @@ int main()
     show_DQ(sampleDeque);
 
     // Insert
-    deque<int> dq1 = {1, 2, 3, 4, 5};
+    deque<int> dq1 = {1, 2, 3, 4, 5};`
 
     deque<int>::iterator it = dq1.begin();
     ++it;
