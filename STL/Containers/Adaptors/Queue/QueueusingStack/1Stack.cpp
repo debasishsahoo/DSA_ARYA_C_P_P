@@ -22,7 +22,7 @@ public:
         // if the stack is empty
         if (s.empty())
         {
-            cout << "Underflow!!";
+            cout << "\nUnderflow!!\n";
             exit(0);
         }
 

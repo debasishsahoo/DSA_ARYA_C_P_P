@@ -36,7 +36,7 @@ public:
         // if the first stack is empty
         if (s1.empty())
         {
-            cout << "Underflow!!";
+            cout << "Underflow!!\n";
             exit(0);
         }
 
