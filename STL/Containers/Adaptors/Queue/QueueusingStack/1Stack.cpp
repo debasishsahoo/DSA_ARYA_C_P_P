@@ -29,19 +29,15 @@ public:
         // pop an item from the stack
         int top = s.top();
         s.pop();
-
         // if the stack becomes empty, return the popped item
         if (s.empty())
         {
             return top;
         }
-
         // recur
         int item = dequeue();
-
         // push popped item back into the stack
         s.push(top);
-
         // return the result of dequeue() call
         return item;
     }

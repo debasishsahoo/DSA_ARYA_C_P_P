@@ -3,7 +3,7 @@
     class A  
     {  
         public:  
-        void display()  
+        int display()  
         {  
             std::cout << "Class A" << std::endl;  
         }  

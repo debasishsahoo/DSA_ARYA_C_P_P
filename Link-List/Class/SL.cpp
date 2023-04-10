@@ -1,180 +1,206 @@
 #include <iostream>
+
 using namespace std;
 
-class Node
+class ListNode
 {
 public:
-    int data;
-    Node *next;
+    int val;
+    ListNode *next;
+    ListNode(int data)
+    {
+        val = data;
+        next = NULL;
+    }
 };
 
-int calcSize(Node *node)
+void insertAtBeginning(ListNode **headRef, int data)
 {
-    int size = 0;
-
-    while (node != NULL)
-    {
-        node = node->next;
-        size++;
-    }
-    return size;
+    ListNode *newNode = new ListNode(data);
+    newNode->next = *headRef;
+    *headRef = newNode;
 }
 
-void insertStart(Node **head, int data)
+void insertAtEnd(ListNode **headRef, int data)
 {
-
-    Node *newNode = new Node();
-
-    newNode->data = data;
-    newNode->next = *head;
-
-    // changing the new head to this freshly entered node
-    *head = newNode;
-}
-
-void insertLast(Node **head, int data)
-{
-
-    Node *newNode = new Node();
-
-    newNode->data = data;
-    newNode->next = NULL;
-
-    // need this if there is no node present in linked list at all
-    if (*head == NULL)
+    ListNode *newNode = new ListNode(data);
+    if (*headRef == NULL)
     {
-        *head = newNode;
-        return;
-    }
-
-    struct Node *temp = *head;
-
-    while (temp->next != NULL)
-        temp = temp->next;
-
-    temp->next = newNode;
-}
-
-void insertPosition(int pos, int data, Node **head)
-{
-    int size = calcSize(*head);
-
-    // If pos is 1 then should use insertStart method
-    // If pos is less than or equal to 0 then can't enter at all
-    // If pos is greater than size then buffer bound issue
-    if (pos < 1 || size < pos)
-    {
-        printf("Can't insert, %d is not a valid position\n", pos);
+        *headRef = newNode;
     }
     else
     {
-        Node *temp = *head;
-        Node *newNode = new Node();
-
-        newNode->data = data;
-        newNode->next = NULL;
-
-        while (--pos)
+        ListNode *current = *headRef;
+        while (current->next != NULL)
         {
-            temp = temp->next;
+            current = current->next;
         }
-        //(25)->next = 10 as 12->next is 10
-        newNode->next = temp->next;
-        // (12)->next = 25
-        temp->next = newNode;
-        // new node added in b/w 12 and 10
+        current->next = newNode;
     }
 }
-void deletenode(Node **head, int delVal)
+
+void insertAtPosition(ListNode **headRef, int data, int position)
 {
-    Node *temp = new Node();
-    temp = *head;
-    Node *previous = new Node();
-
-    // Case when there is only 1 node in the list
-    if (temp->next == NULL)
+    if (position < 0)
     {
-        *head = NULL;
-        free(temp);
-        cout << "Value deleted: " << delVal << endl;
         return;
     }
-    // if the head node itself needs to be deleted
-    if (temp != NULL && temp->data == delVal)
+    if (position == 0)
     {
-        // Case 1 head becomes 30
-        *head = temp->next; // changing head to next in the list
-
-        cout << "Value deleted: " << delVal << endl;
-        // case 1: 22 deleted and freed
-        free(temp);
-        return;
+        insertAtBeginning(headRef, data);
     }
-
-    // run until we find the value to be deleted in the list
-    while (temp != NULL && temp->data != delVal)
+    else
     {
-        // store previous link node as we need to change its next val
-        previous = temp;
-        temp = temp->next;
+        ListNode *newNode = new ListNode(data);
+        ListNode *current = *headRef;
+        for (int i = 0; i < position - 1 && current != NULL; i++)
+        {
+            current = current->next;
+        }
+        if (current == NULL)
+        {
+            return;
+        }
+        newNode->next = current->next;
+        current->next = newNode;
     }
-
-    // if value is not present then
-    // temp will have traversed to last node NULL
-    if (temp == NULL)
-    {
-        printf("Value not found\n");
-        return;
-    }
-
-    // Case 2: (24)->next = 16 (as 20->next = 16)
-    // Case 3: (16)->next = NULL (as 12->next = NULL)
-    previous->next = temp->next;
-    free(temp);
-
-    // case 2: 20 deleted and freed
-    // case 3: 12 deleted and freed
-    cout << "Value, deleted: " << delVal << endl;
 }
-void display(Node *node)
-{
 
-    // as linked list will end when Node is Null
-    while (node != NULL)
+void deleteAtBeginning(ListNode **headRef)
+{
+    if (*headRef == NULL)
     {
-        cout << "[" << node->data << "]->";
-        node = node->next;
+        return;
     }
-    cout << "NULL";
-    cout << endl;
+    ListNode *temp = *headRef;
+    *headRef = (*headRef)->next;
+    delete temp;
+}
+
+void deleteAtEnd(ListNode **headRef)
+{
+    if (*headRef == NULL)
+    {
+        return;
+    }
+    if ((*headRef)->next == NULL)
+    {
+        delete *headRef;
+        *headRef = NULL;
+    }
+    else
+    {
+        ListNode *current = *headRef;
+        while (current->next->next != NULL)
+        {
+            current = current->next;
+        }
+        delete current->next;
+        current->next = NULL;
+    }
+}
+
+void deleteAtPosition(ListNode **headRef, int position)
+{
+    if (*headRef == NULL || position < 0)
+    {
+        return;
+    }
+    if (position == 0)
+    {
+        deleteAtBeginning(headRef);
+    }
+    else
+    {
+        ListNode *current = *headRef;
+        for (int i = 0; i < position - 1 && current->next != NULL; i++)
+        {
+            current = current->next;
+        }
+        if (current->next == NULL)
+        {
+            return;
+        }
+        ListNode *temp = current->next;
+        current->next = temp->next;
+        delete temp;
+    }
+}
+
+bool search(ListNode *head, int data)
+{
+    ListNode *current = head;
+    while (current != NULL)
+    {
+        if (current->val == data)
+        {
+            return true;
+        }
+        current = current->next;
+    }
+    return false;
+}
+
+void reverseList(ListNode **headRef)
+{
+    ListNode *current = *headRef;
+    ListNode *prev = NULL;
+    ListNode *next = NULL;
+    while (current != NULL)
+    {
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
+    }
+    *headRef = prev;
+}
+
+void printList(ListNode *head)
+{
+    ListNode *current = head;
+    while (current != NULL)
+    {
+        cout << current->val << " ";
+        current = current->next;
+    }
 }
 
 int main()
 {
+    ListNode *head = NULL;
 
-    Node *head = NULL;
+    // insert 1 at the beginning
+    insertAtBeginning(&head, 1);
+    printList(head); // 1
 
-    /*Need & i.e. address as we
-    need to change head address only needs to traverse
-    and access items temporarily
-    */
-    insertStart(&head, 12);
-    insertStart(&head, 16);
-    insertStart(&head, 20);
-    display(head);
+    // insert 2 at the end
+    insertAtEnd(&head, 2);
+    printList(head); // 1 2
 
-    insertLast(&head, 10);
-    insertLast(&head, 14);
-    insertLast(&head, 18);
-    insertLast(&head, 11);
+    // insert 3 at position 1
+    insertAtPosition(&head, 3, 1);
+    printList(head); // 1 3 2
 
-    display(head);
-    // Inserts after 3rd position
-    insertPosition(3, 25, &head);
+    // delete first element
+    deleteAtBeginning(&head);
+    printList(head); // 3 2
 
-    /*No need for & i.e. address as we do not
-    need to change head address
-    */
-    display(head);
+    // delete last element
+    deleteAtEnd(&head);
+    printList(head); // 3
+
+    // delete element at position 0
+    deleteAtPosition(&head, 0);
+    printList(head); // 3
+
+    // search for an element
+    cout << search(head, 3) << endl; // 1
+    cout << search(head, 2) << endl; // 0
+
+    // reverse the list
+    reverseList(&head);
+    printList(head); // 3
+
     return 0;
 }

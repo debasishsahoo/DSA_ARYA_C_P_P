@@ -32,10 +32,14 @@
     int main()  
     {  
         Rectangle r;  
-        Triangle t;  
+        Triangle t; 
+         
         int length,breadth,base,height;  
-        std::cout << "Enter the length and breadth of a rectangle: " << std::endl;  
-        cin>>length>>breadth;  
+        std::cout << "Enter the length and breadth of a rectangle: " << std::endl; 
+
+
+        cin>>length>>breadth; 
+
         r.get_data(length,breadth);  
         int m = r.rect_area();  
         std::cout << "Area of the rectangle is : " <<m<< std::endl;  

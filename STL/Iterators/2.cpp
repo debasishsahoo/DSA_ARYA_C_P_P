@@ -11,13 +11,14 @@ int main()
     // Declaring iterator to a vector
     vector<int>::iterator ptr = ar.begin();
 
+    cout << *ptr << "\n ";
     // Using advance() to increment iterator position
     // points to 4
     advance(ptr, 3);
 
     // Displaying iterator position
     cout << "The position of iterator after advancing is : ";
-    cout << *ptr << " ";
+    cout << *ptr << "\n ";
 
     return 0;
 }
