@@ -14,12 +14,9 @@ ListNode *detectCycle(ListNode *head)
 {
     ListNode *slow = head;
     ListNode *fast = head;
-
     while (fast && fast->next)
-    {
-        slow = slow->next;
+    {slow = slow->next;
         fast = fast->next->next;
-
         if (slow == fast)
         { // cycle detected
             ListNode *tortoise = head;
@@ -27,9 +24,7 @@ ListNode *detectCycle(ListNode *head)
             { // find the start node of the loop
                 tortoise = tortoise->next;
                 slow = slow->next;
-            }
-            return tortoise;
-        }
+            }return tortoise;}
     }
     return NULL; // no cycle found
 }
