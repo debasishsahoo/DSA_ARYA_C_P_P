@@ -4,7 +4,7 @@ using namespace std;
 struct Node
 {
     int data;
-    struct Node *next;
+    struct Node *next;                    
 };
 
 // This function prints contents of linked list starting from
