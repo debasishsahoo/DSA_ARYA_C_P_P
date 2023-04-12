@@ -4,31 +4,25 @@ class A
 {
 protected:
     int a;
+
 public:
     void get_a(int n)
     {
         a = n;
-    }};
+    }
+};
 
-class B{protected:
+class B
+{
+protected:
     int b;
+
 public:
     void get_b(int n)
     {
         b = n;
-    }};
-
-
-
-
-
-
-
-
-
-
-
-
+    }
+};
 
 class C : public A, public B
 {
